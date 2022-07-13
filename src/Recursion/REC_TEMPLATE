@@ -1,0 +1,114 @@
+public class recursion_ALL
+ {
+
+    static int sumOfN(int n) {
+        if (n == 0)
+            return 0;
+        return n + sumOfN(--n);
+    }
+
+    static int multiplication(int a, int b) {
+        if (b == 0)
+            return 0;
+        return a + multiplication(a, --b);
+    }
+
+    static int power(int a, int b) {
+        if (b == 1)
+            return a;
+        return a * power(a, --b);
+    }
+
+    static int factorial(int n) {
+        if (n == 1)
+            return 1;
+        return n * (factorial(--n));
+    }
+
+    static String reverse1(String s) {
+        if (s.length() == 0)
+            return s;
+        return reverse1(s.substring(1)) + s.charAt(0);
+    }
+
+    static int linearSearch(int[] arr, int e, int i) {
+        if (i == arr.length - 1)
+            return -1;
+        if (arr[i] == e)
+            return i;
+        return linearSearch(arr, e, ++i);
+    }
+
+    static int fibo(int n, int i, int j, int tmp) {
+        i = j;
+        j = tmp;
+        tmp = i + j;
+        if (n == 0)
+            return j + tmp;
+        return fibo(--n, i, j, tmp);
+    }
+
+    static int hcf(int a, int b) {
+        if (a == 0)
+            return b;
+        return hcf(b & a, a);
+    }
+
+    static int lcm(int a, int b) {
+        return (a * b) / hcf(a, b);
+    }
+
+    static int sumOfDigits(int n) {
+        if (n < 10)
+            return n;
+        return sumOfDigits((n - (n % 10)) / 10) + n % 10;
+    }
+
+    static void circularPermutations(String str) {
+        if (str.length() > 0) {
+            String s = str.substring(1) + str.charAt(0);
+            System.out.println(s);
+            circularPermutations(s);
+        }
+    }
+
+    static int decimalToBinary(int n) {
+        if (n == 0)
+            return 0;
+        return n % 2 + 10 * decimalToBinary(n / 2);
+    }
+
+    static int binaryToDecimal(int n) {
+        if (n == 0)
+            return 0;
+        return n % 10 + 2 * binaryToDecimal(n / 10);
+    }
+
+        static int binarySearch(int[] A, int low, int high, int x)
+    {
+        if (low > high) {
+            return -1;
+        }
+        int mid = (low + high) / 2;
+        if (x == A[mid]) {
+            return mid;
+        }
+        else if (x < A[mid]) {
+            return binarySearch(A, low,  mid - 1, x);
+        }
+        else {
+            return binarySearch(A, mid + 1,  high, x);
+        }
+    }
+
+        static void perm(int i)
+    {
+        if (i==s.length-1)
+        System.out.print();
+        else{
+        System.out.println(s.substring(i) + s.charAt(i));
+        perm(i+1);
+    }
+    }
+
+}
