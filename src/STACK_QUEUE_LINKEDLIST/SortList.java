@@ -88,4 +88,5 @@ public class SortList {
 //Displaying sorted list
         System.out.println("Sorted list: ");
         cl.display();
-    }}
+    }
+}
