@@ -87,9 +87,9 @@ public class MinMaxQueue {
         System.out.println("Enter the size of the list");
         int n = sc.nextInt();
         //Adds data to the list
+        System.out.println("Enter " +n+ " Elements");
         for (int i = 0;i< n;i++ )
         {
-            System.out.println("Enter the Elements");
             num = sc.nextInt();
             cl.add(num);
             num=0;
